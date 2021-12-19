@@ -1,22 +1,23 @@
+import { VideosService } from './../services/videos.service';
 import { Component, OnInit } from '@angular/core';
 import { Video } from '../model/video';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.scss']
 })
+
 export class VideosComponent implements OnInit {
 
-  videos: Video[] = [
-    { _id: '1', name: 'Tiringa e a naja assassina', category: 'Coméria' },
-    { _id: '2', name: 'Tiringa e a cobra assassina', category: 'Natureza' }
-  ];
+  videos: Observable<Video[]>;
   displayedColumns = ['name', 'category'];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private videosService: VideosService) {
+    this.videos = this.videosService.listAll();
   }
+
+  ngOnInit(): void { }
 
 }

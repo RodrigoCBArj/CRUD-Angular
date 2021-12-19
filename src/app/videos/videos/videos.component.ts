@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
 
 export class VideosComponent implements OnInit {
 
-  videos: Observable<Video[]>;
+  videos$: Observable<Video[]>;
   displayedColumns = ['name', 'category'];
 
   constructor(private videosService: VideosService) {
-    this.videos = this.videosService.listAll();
+    this.videos$ = this.videosService.listAll();
   }
 
   ngOnInit(): void { }

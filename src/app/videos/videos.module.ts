@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
 
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { VideosRoutingModule } from './videos-routing.module';
 import { VideosComponent } from './videos/videos.component';
 
@@ -13,7 +13,8 @@ import { VideosComponent } from './videos/videos.component';
   imports: [
     CommonModule,
     VideosRoutingModule,
-    MatTableModule
+    AppMaterialModule
   ]
 })
+
 export class VideosModule { }

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SharedModule } from '../shared/shared.module';
 import { VideosRoutingModule } from './videos-routing.module';
 import { VideosComponent } from './videos/videos.component';
 
@@ -13,7 +14,8 @@ import { VideosComponent } from './videos/videos.component';
   imports: [
     CommonModule,
     VideosRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ]
 })
 

@@ -18,7 +18,7 @@ export class VideosService {
     return this.HttpClient.get<Video[]>(this.API)
     .pipe(
       first(), // recebe apenas a primeira resposta do servidor e finaliza a comunicação
-      delay(5000), // para testar o loading - remover depois
+      delay(1000),
       tap(courses => console.log(courses))
     );
   }

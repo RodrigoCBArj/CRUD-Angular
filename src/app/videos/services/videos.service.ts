@@ -7,7 +7,6 @@ import { delay, first, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-
 export class VideosService {
 
   private readonly API = 'api/videos';

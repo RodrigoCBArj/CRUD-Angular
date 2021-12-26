@@ -7,7 +7,7 @@ export class CategoryPipe implements PipeTransform {
 
   transform(value: string): string {
     switch(value) {
-      case 'Coméria': return 'theater_comedy';
+      case 'Comédia': return 'theater_comedy';
       case 'Natureza': return 'park';
     }
     return 'smart_display';

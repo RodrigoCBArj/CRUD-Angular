@@ -19,7 +19,7 @@ export class VideosComponent implements OnInit {
   constructor(
     private VideosService: VideosService,
     public dialog: MatDialog
-    ) {
+  ) {
     this.videos$ = this.VideosService.listAll()
       .pipe(
         catchError(error => {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, of } from 'rxjs';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
 
@@ -14,11 +15,13 @@ import { VideosService } from './../services/videos.service';
 export class VideosComponent implements OnInit {
 
   videos$: Observable<Video[]>;
-  displayedColumns = ['name', 'category'];
+  displayedColumns = ['name', 'category', 'actions'];
 
   constructor(
     private VideosService: VideosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.videos$ = this.VideosService.listAll()
       .pipe(
@@ -36,4 +39,8 @@ export class VideosComponent implements OnInit {
   }
 
   ngOnInit(): void { }
+
+  onAdd() {
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
 }

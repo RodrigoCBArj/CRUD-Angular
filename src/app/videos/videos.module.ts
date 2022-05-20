@@ -5,11 +5,13 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { SharedModule } from '../shared/shared.module';
 import { VideosRoutingModule } from './videos-routing.module';
 import { VideosComponent } from './videos/videos.component';
+import { VideoFormComponent } from './video-form/video-form.component';
 
 
 @NgModule({
   declarations: [
-    VideosComponent
+    VideosComponent,
+    VideoFormComponent
   ],
   imports: [
     CommonModule,

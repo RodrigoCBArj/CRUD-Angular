@@ -2,7 +2,7 @@
 @include mat-core();
 
 $custom-app-primary: mat-palette($mat-blue);
-$custom-app-secondary: mat-palette($mat-purple, 700, 800, 900);
+$custom-app-secondary: mat-palette($mat-orange, 700, 800, 900);
 $custom-app-warn: mat-palette($mat-red);
 
 $custom-dark-theme: mat-dark-theme($custom-app-primary, $custom-app-secondary, $custom-app-warn);
@@ -10,7 +10,7 @@ $custom-dark-theme: mat-dark-theme($custom-app-primary, $custom-app-secondary, $
 @include angular-material-theme($custom-dark-theme);
 
 span {
-  color: #0b0c0e;
+  color: #FAFAFA;
 }
 
 html,

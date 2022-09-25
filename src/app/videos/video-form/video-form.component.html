@@ -10,7 +10,13 @@
       </mat-form-field>
 
       <mat-form-field class="full-width">
-        <input matInput placeholder="Categoria" formControlName="category">
+        <mat-label>Categoria</mat-label>
+        <mat-select formControlName="category">
+          <mat-option>Selecione:</mat-option>
+          <mat-option value="comedia">Comédia</mat-option>
+          <mat-option value="ensino">Ensino</mat-option>
+          <mat-option value="tutorial">Tutorial</mat-option>
+        </mat-select>
       </mat-form-field>
     </form>
   </mat-card-content>
